@@ -1,0 +1,42 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+
+<div class="container">
+  <br />
+  {% if allMsgs|length == 0 %}
+  <h1>No Messages to Show</h1>
+
+  <h1 style="font-size: 100px">&#128542;</h1>
+  {% else %}
+
+  <div class="ui comments">
+    <h3 class="ui dividing header">All Messages</h3>
+
+    {% for msg in allMsgs %}
+    <div class="comment">
+      <a class="avatar">
+        <img src="{% static 'images/logo1.png' %}" />
+      </a>
+      <div class="content">
+        <a class="author">{{msg.user.username}}</a>
+        <div class="metadata">
+          <span class="date">{{msg.created}}</span>
+        </div>
+
+
+        <div class="text">{{msg.body}}</div>
+        <div class="metadata">
+          <span class="date">0{{msg.phnNum}}</span>
+        </div>
+        <div class="metadata">
+          <span class="date"><a href="{% url 'see-replies' msg.id%}">Reply</a></span>
+        </div>
+      </div>
+    </div>
+    <hr />
+    {% endfor %}
+  </div>
+
+  {% endif %}
+</div>
+
+{% endblock content %}

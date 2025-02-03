@@ -1,0 +1,68 @@
+{% extends 'base.html' %} {% block content %}
+
+<div class="container">
+  <h1>{{package.title}}</h1>
+  <hr />
+
+  <div class="row">
+    <div class="col-md-6">
+      <img src="{{package.thumbnail.url}}" height="400" width="100%" />
+      <br>
+      <br>
+      <p style="text-align: justify;">{{package.description}}</p>
+
+    </div>
+
+    <div class="col-md-6">
+      <table class="table table-bordered">
+        <tbody>
+          <tr>
+            <td>Package Name</td>
+            <td >{{package.title}}</td>
+          </tr>
+          <tr>
+            <td>Total Picture</td>
+            <td >{{package.totalPicture}}</td>
+          </tr>
+          <tr>
+            <td>Edited Picture</td>
+            <td>{{package.editedPicture}}</td>
+          </tr>
+          <tr>
+            <td>Photographer</td>
+
+            <td>{{package.photographer}}</td>
+          </tr>
+          <tr>
+            <td>Videographer</td>
+
+            <td>{{package.videographer}}</td>
+          </tr>
+          <tr>
+            <td>Price</td>
+
+            <td>{{package.price}} Taka</td>
+          </tr>
+          <tr>
+            <td>Discont </td>
+            <td>{{package.discount}}%</td>
+          </tr>
+
+          <tr>
+            <td> <h1>Discount Price</h1></td>
+            <td style="color: green"><h1>{{discountPrice}} Taka </h1</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <button class="ui secondary button">
+        <a href="{% url 'home' %}">Back to Feed</a>
+      </button>
+    </div>
+  </div>
+</div>
+
+{% endblock content %} {% block scripts %}
+
+<script></script>
+{% endblock scripts %}

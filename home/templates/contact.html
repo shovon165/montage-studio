@@ -1,0 +1,25 @@
+
+{% extends 'base.html' %} {% block content %}
+
+<div class="container">
+  <h1>Contact Form</h1>
+  <hr>
+  <form
+    action="{% url 'contact' %}"
+    class="ui form"
+    enctype="multipart/form-data"
+    method="POST"
+  >
+    {% csrf_token %} {{form.as_p}}
+    <button name="update-btn" type="submit" class="ui button primary mt-1">
+      Send Message
+    </button>
+    <br />
+    <br />
+  </form>
+</div>
+{% endblock content %} {% block scripts %}
+<script>
+
+</script>
+{% endblock scripts %}

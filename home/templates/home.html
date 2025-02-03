@@ -1,0 +1,105 @@
+{% extends 'base.html' %} {% block content %}
+
+<div
+  id="carouselExampleAutoplaying"
+  class="carousel slide"
+  data-bs-ride="carousel"
+>
+  <div class="carousel-inner">
+    <div class="carousel-item">
+      <img
+        src="https://images2.imgbox.com/b6/ba/AL8sn3Bu_o.jpg"
+        class="d-block w-100"
+        alt="..."
+      />
+    </div>
+    <div class="carousel-item active">
+      <img
+        src="https://images2.imgbox.com/3b/bf/dT07QcH0_o.jpg"
+        class="d-block w-100"
+        alt="..."
+      />
+    </div>
+    <div class="carousel-item">
+      <img
+        src="https://images2.imgbox.com/4a/ff/KB32tjvs_o.jpg"
+        class="d-block w-100"
+        alt="..."
+      />
+    </div>
+  </div>
+  <button
+    class="carousel-control-prev"
+    type="button"
+    data-bs-target="#carouselExampleAutoplaying"
+    data-bs-slide="prev"
+  >
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button
+    class="carousel-control-next"
+    type="button"
+    data-bs-target="#carouselExampleAutoplaying"
+    data-bs-slide="next"
+  >
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+<section
+  class="wow fadeIn cover-background sm-no-background-img bg-medium-light-gray"
+  style="
+    padding: 50px 50px;
+    background-image: url('//i0.wp.com/dreamweaver.com.bd/wp-content/uploads/2017/11/homepage-option17-banner-bg.jpg');
+    visibility: visible;
+    animation-name: fadeIn;
+  "
+>
+  <div class="container">
+    <div class="row">
+      <div
+        class="col-lg-12 col-md-6 col-sm-12 col-xs-12 pull-right wow fadeIn"
+        style="text-align: justify; visibility: visible; animation-name: fadeIn"
+      >
+        <h5
+          style="margin-bottom: 5px"
+          class="alt-font text-extra-dark-gray font-weight-500"
+        >
+          WHO WE ARE
+        </h5>
+        <p>
+          Montage Studio was created by a group of young engineering students of
+          RUET and RU, they chose their passion as their profession and this
+          incident of their life have been pushing them constantly to expand
+          their potentiality.
+        </p>
+        <p>
+          Right now Montage Studio has one of the highest number of fan
+          following among Bangladeshi wedding photography Facebook pages based
+          in Rajshahi. Among many other achievements we recognize this as the
+          most important one as it directly indicates how many people are
+          relating with us personally. Their likes and comments inspire us to do
+          better every day.
+        </p>
+        <p>
+          In the last 3 years we have covered more than 100+ events. Our team is
+          a small but strong team of 4 Photographers, cinematographers &amp;
+          Editors. All our photographers are highly educated, most of them are
+          engineers. Recently we have taken Montage Studio to an countrywide
+          level.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock content %} {% block scripts %}
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+  crossorigin="anonymous"
+></script>
+
+{% endblock scripts %}

@@ -1,0 +1,64 @@
+{% extends 'base.html' %} {% block content %}
+
+<div class="container">
+  <div class="row">
+    {% for package,afterdiscount in allPackages %}
+    <div class="container col-md-3">
+
+      <a class="header" href="{% url 'show-packages' package.id %}">
+
+      <div class="ui card mt-4">
+        <img src="{{package.thumbnail.url}}" height="400" width="100%" />
+
+        <div class="content">
+          <a class="header" href="{% url 'show-packages' package.id %}">{{package.title}}</a>
+          <hr />
+
+          <div class="row">
+            <div class="col-md-6">
+              <a class="header" href=""
+                >Total Photos - {{package.totalPicture}}</a
+              >
+              <a class="header" href=""
+                >Edited Photos - {{package.editedPicture}}</a
+              >
+            </div>
+            <div class="col-md-6">
+              <a class="header" href=""
+                >Photographer - {{package.photographer}}</a
+              >
+              <a class="header" href=""
+                >Videographer - {{package.videographer}}</a
+              >
+            </div>
+          </div>
+
+          <hr />
+
+          <div class="meta">
+            <span class="date">{{package.discount}}% Discount</span>
+          </div>
+          <div class="description">
+            {% if package.discount > 0 %}
+
+            <h3>
+              <s style="color: red"> TK {{package.price}} </s>
+              &nbsp; {{afterdiscount}}
+            </h3>
+
+            {% else %}
+            <h3>TK {{package.price}}</h3>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+
+    </a>
+
+    </div>
+
+    {% endfor %}
+  </div>
+</div>
+
+{% endblock content %}

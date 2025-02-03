@@ -1,0 +1,61 @@
+{% extends 'base.html' %} {% block content %}
+
+<style>
+  .intro {
+    text-align: center;
+  }
+</style>
+
+<div class="container mt-2">
+  <div class="jumbotron">
+    <h1 class="display-4">About Us</h1>
+
+    <h5>Hello, {{request.user.username}}</h5>
+    <p>{{request.user.email}}</p>
+    <ul>
+      <p>
+        Montage Studio was created by a group of young engineering students of
+        RUET and RU, they chose their passion as their profession and this
+        incident of their life have been pushing them constantly to expand their
+        potentiality.
+      </p>
+      <p>
+        Right now Montage Studio has one of the highest number of fan following
+        among Bangladeshi wedding photography Facebook pages based in Rajshahi.
+        Among many other achievements we recognize this as the most important
+        one as it directly indicates how many people are relating with us
+        personally. Their likes and comments inspire us to do better every day.
+      </p>
+      <p>
+        In the last 3 years we have covered more than 100+ events. Our team is a
+        small but strong team of 4 Photographers, cinematographers &amp;
+        Editors. All our photographers are highly educated, most of them are
+        engineers. Recently we have taken Montage Studio to an countrywide
+        level.
+      </p>
+    </ul>
+    <p class="lead" style="color: red">
+      This Website is Under Construction and Developed by Mehedi Hasan Shovon
+      , Roll - 1903165
+      <br />
+      Due to The Course of CSE 3100 ,Under The Supervisor Dr. Prof. Dr. Boshir Ahmed
+    </p>
+    <hr class="my-4" />
+    <div class="row">
+      <div class="col-sm-6">
+        <h4 class="intro">Submitted To</h4>
+        <h2 class="intro">Prof. Dr. Boshir Ahmed</h2>
+        <h3 class="intro">Professor</h3>
+        <h5 class="intro">Rajshahi University of Engineering and Technology</h5>
+      </div>
+      <div class="col-sm-6">
+        <h4 class="intro">Submitted By</h4>
+        <h2 class="intro">Mehedi Hasan Shovon</h2>
+        <h3 class="intro">Roll - 1903165</h3>
+        <h5 class="intro">Rajshahi University of Engineering and Technology</h5>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock content %}
